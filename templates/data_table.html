@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reported Incidents</title>
+  <style>
+   
+    body, h1, h2, h3, h4, h5, h6, p {
+      margin: 0;
+      padding: 0;
+      line-height: 1.2;
+    }
+
+  
+    header {
+      background-color: #130b40;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    
+    .table-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    
+    .data-table {
+      margin: 20px;
+    }
+
+    
+    .data-table table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 1px solid black;
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background-color: #f2f2f2;
+    }
+
+    
+    .data-table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    @media (max-width: 768px) {
+      .data-table table {
+        font-size: 14px;
+      }
+
+      .data-table th, .data-table td {
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>REPORTED INCIDENTS</h2>
+  </header>
+  <main>
+    <section class="data-table">
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Surname</th>
+              <th>Other Names</th>
+              <th>Location</th>
+              <th>Department</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Date of Incident</th>
+              <th>Risk Description</th>
+              <th>Action to Minimize Risk</th>
+              <th>Existing Control</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for entry in form_data %}
+            <tr>
+              <td>{{ entry[0] }}</td>
+              <td>{{ entry[1] }}</td>
+              <td>{{ entry[2] }}</td>
+              <td>{{ entry[3] }}</td>
+              <td>{{ entry[4] }}</td>
+              <td>{{ entry[5] }}</td>
+              <td>{{ entry[6] }}</td>
+              <td>{{ entry[7] }}</td>
+              <td>{{ entry[8] }}</td>
+              <td>{{ entry[9] }}</td>
+              <td>{{ entry[10] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="static\css\stylesheet.css">
+</head>
+<body>
+  <header>
+    <h2>RISK INCIDENT PORTAL</h2>
+  </header>
+  <section class="container">
+    <form id="my-form" method="post" action="/admin">
+      <div class="signin-text">Sign In</div>
+      <div class="msg"></div>
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"> 
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+      </div>
+      <button type="submit" id="submit">Login</button>
+    </form>
+    {% if error_message %}
+    <div class="error-message">{{ error_message }}</div>
+  {% endif %}
+  </section>
+</body>
+</html>
