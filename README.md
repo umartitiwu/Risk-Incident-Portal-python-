@@ -1,1 +1,6 @@
-Understanding React 'Robofriends' with Andrei (Zero-to-Mastery).
+About Project
+
+Risk incident reporting portal
+Framework: Flask
+Language: Python
+Database: SQlite
